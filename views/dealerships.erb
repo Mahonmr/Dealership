@@ -2,7 +2,8 @@
 
 <ul>
   <% @dealerships.each() do |dealership| %>
-    <li><a href="/dealerships/<%= dealership.id() %>"><%= dealership.name() %></a></li>
+    <li><a href="/dealerships/<%= dealership.id() %>"><%= dealership.name() %></a>
+    <a href="/delete_dealership/<%= dealership.id() %>">Delete</a></li>
   <% end %>
 </ul>
 <br>

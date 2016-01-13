@@ -40,6 +40,12 @@ get('/dealerships/:id/vehicles/new') do
   erb(:dealership_vehicles_form)
 end
 
+get ('/delete_dealership/:id') do
+  @dealership = Dealership.find(params.fetch('id').to_i())
+  @dealership.delete()
+  erb(:success)
+end
+
 post('/vehicles') do
   make = params.fetch('make')
   model = params.fetch('model')

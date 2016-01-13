@@ -35,6 +35,11 @@ class Dealership
     @cars.push(vehicle)
   end
 
+  define_method(:delete) do
+    @@dealerships.delete(self)
+  end
+
+
   define_singleton_method(:find) do |id|
     found_dealership = nil
     @@dealerships.each() do |dealership|
