@@ -1,3 +1,7 @@
 <h1>Vehicle List</h1>
 
-<h2><%= @vehicles %></h2>
+<ul>
+  <% @vehicles.each do |vehicle| %>
+  <li><a href="/vehicles/<%= vehicle.id() %>"><%= vehicle.model() %></a></li>
+  <% end %>
+</ul>

@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/vehicle')
+require('pry')
 
 get ('/') do
   erb(:index)
@@ -23,4 +24,9 @@ post('/vehicles') do
   vehicle = Vehicle.new(make, model, year)
   vehicle.save()
   erb(:success)
+end
+
+get('/vehicles/:id') do
+  @vehicle = Vehicle.find(params.fetch('id'))
+  erb(:vehicle)
 end
