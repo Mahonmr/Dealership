@@ -1,3 +1,15 @@
 body {
   background-color: #d8e9e3
 }
+
+.jumbotron {
+  background-color: #d2d9ea
+}
+
+a {
+  font-size: 22px
+}
+
+a:hover {
+  color: #54a44c
+}
