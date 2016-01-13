@@ -1,7 +1,13 @@
-<h1>Dealerships test</h1>
+<h1>Dealership List</h1>
 
 <ul>
   <% @dealerships.each() do |dealership| %>
     <li><a href="/dealerships/<%= dealership.id() %>"><%= dealership.name() %></a></li>
   <% end %>
 </ul>
+<br>
+<form class="clear-btn" action="/" method="post">
+       <button type="submit" class="btn btn-danger">Clear</button>
+     </form>
+<br>
+<a href='/'>Home</a>

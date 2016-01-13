@@ -50,3 +50,8 @@ post('/vehicles') do
   @dealership.add_vehicle(@vehicle)
   erb(:success)
 end
+
+post('/') do
+  clear = Dealership.clear()
+  erb(:clear)
+end
